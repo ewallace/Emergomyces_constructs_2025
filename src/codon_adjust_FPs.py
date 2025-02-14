@@ -130,7 +130,7 @@ proteins_for_design = [
     "mCardinal",
     "mCherry-XL",
     "mCherry",
-    "mNeptune2_5",
+    "mNeptune2-5",
     "mScarlet-I3",
     "mScarlet3-H",
     "mGreenLantern",
