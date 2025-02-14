@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Created on Sun Jul 17 12:06:49 2022
+Created 2025-02-14
 
 @author: Edward Wallace
 """
@@ -11,7 +11,7 @@ Created on Sun Jul 17 12:06:49 2022
 # This script builds on anidulans_codon_adjust.py script from Domenico Modaffari
 
 # import codon counting functions, EW adapted from CodonAdaptationIndex package
-from codoncount_functions import *
+from codon_count_functions import *
 
 # import relevant functions from DNAchisel
 from dnachisel import (DnaOptimizationProblem,
@@ -75,17 +75,22 @@ def codon_adjust(proteinseq,
         add_date = True,
         with_constraints = False,
         with_objectives = False):
+    
+    # set random seed before starting the optimization problem
+    if (seed is not None) :
+        random.seed(seed)
+    
+    # This is the heart of the script
     problem = DnaOptimizationProblem(
         sequence = reverse_translate(proteinseq),
         constraints = all_constraints,
         objectives = objectives_match_uniquify
         )
     
-    if (seed is not None) :
-        random.seed(seed)
-    
     problem.resolve_constraints()
     problem.optimize()
+    
+    # After this, it's about labeling/annotating the output
     # convert to record
     record = problem.to_record(
         record_id = record_id,
@@ -111,12 +116,41 @@ def codon_adjust(proteinseq,
     return record
 
 
-# Apply to the proteins of interest. Write out to a record
-codon_adjust(
-    proteinseq = SeqIO.read("data/mCardinal.fasta", "fasta"),
-    seed = 1,
-    filepath = "designs/mCardinalHc_2025-02-14.gbk",
-    record_id = "mCardinalHc",
-    CDS_id = "mCardinal")
+## Apply to the proteins of interest. Write out to a record
+# example if we were doing for single protein:
+# codon_adjust(
+#     proteinseq = SeqIO.read("data/mCardinal.fasta", "fasta"),
+#     seed = 1,
+#     filepath = "designs/mCardinalHc_2025-02-14.gbk",
+#     record_id = "mCardinalHc",
+#     CDS_id = "mCardinal")
 
+# Loop over the relevant proteins:
+proteins_for_design = [
+    "mCardinal",
+    "mCherry-XL",
+    "mCherry",
+    "mNeptune2_5",
+    "mScarlet-I3",
+    "mScarlet3-H",
+    "mGreenLantern",
+    "mKO2",
+    "mNeonGreen",
+    "fuGFP",
+    "hfYFP",
+    "mStayGold" 
+    ]
 
+for protein in proteins_for_design :
+    print("codon adjusting for protein " + protein)
+    # make a random seed for each protein based on the name, so reproducible
+    pseed = int.from_bytes(protein.encode()) % 1000000
+    # do the codon adjusting and write to file:
+    codon_adjust(
+        proteinseq = SeqIO.read("data/" + protein + ".fasta", "fasta"),
+        seed = pseed,
+        filepath = "designs/" + protein + "Hc_2025-02-14.gbk",
+        record_id = protein + "Hc",
+        CDS_id = protein)
+
+print("all done")

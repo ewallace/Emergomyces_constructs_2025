@@ -1,0 +1,25 @@
+LOCUS       hfYFPHc                  717 bp    DNA              UNK 01-JAN-1980
+DEFINITION  .
+ACCESSION   hfYFPHc
+VERSION     hfYFPHc
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     CDS             1..717
+                     /gene="hfYFP"
+ORIGIN
+        1 atggtttcga agggcgagga actctttacg ggtgtcgtcc ccattctggt cgagttggat
+       61 ggtgacgtta atggtcataa attctcagtg cgaggtgaag gggaaggcga tgctactaac
+      121 ggcaaactta ccctgaagct catatccacc acaggcaagt tgccagttcc gtggcctaca
+      181 ctggtgacaa ccttgggata cggattgatg gtctttgcga gatacccaga tcacatgaag
+      241 cagcacgact tctttaagtc cgcgatgcca gagggctacg tccaagagcg taccatttca
+      301 ttcgaggatg acggatacta taagacgcgc gctgaagtga agttcgaggg tgataccctt
+      361 gtcaatcgca tcgtgctgaa agggatcgac ttcaaagagg atggcaacat cctcggacac
+      421 aagctggagt acaatttcaa cagccacaac gtctatatca ccgccgataa gcagaagaac
+      481 ggaatcaagg ccaacttcaa aatccgacat aatgtcgagg acggtggcgt tcaactcgcc
+      541 gaccattatc aacagaatac tccgattggc gatggtcccg ttctcctccc cgataaccac
+      601 tacctttcct accagtctgt cctcagcaag gaccctaacg agaagcggga ccacatggtc
+      661 ctcaaggaac gtgttactgc agccgggatc acgcatgaca tgaacgaact ttataaa
+//

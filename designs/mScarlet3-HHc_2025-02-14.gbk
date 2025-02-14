@@ -1,0 +1,25 @@
+LOCUS       mScarlet3-HHc            687 bp    DNA              UNK 01-JAN-1980
+DEFINITION  .
+ACCESSION   mScarlet3-HHc
+VERSION     mScarlet3-HHc
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     CDS             1..687
+                     /gene="mScarlet3-H"
+ORIGIN
+        1 atggattcca ctgaggccgt catcaaggag ttcatgcggt tcaaggtgca tatggagggc
+       61 tctatgaacg gccacgagtt tgagatcgag ggcgaagggg aaggtagacc ttacgagggt
+      121 acacagacgg ctaaactccg tgttactaaa gggggtccac tgcccttctc ctgggacatt
+      181 ttgtctcctc agttcatgta tggctcacgt gccttcacca aacaccccgc tgatatccct
+      241 gactactgga agcaatcctt cccggagggc ttcaagtggg aacgcgtgat gaactttgaa
+      301 gatggtggcg cagtctctgt ggcgcaagac acatcgttgg aagatggtac gctcatctac
+      361 aaggtcaagc tccgtggaac caattttccc ccggacggac ctgttatgca gaaaaagacc
+      421 atgggatggg aggccagcac cgagagactg tatccagagg atgtcgtcct caagggggac
+      481 attaagcatg ctcttcgcct caaagacgga ggtcgatacc ttgccgattt caagacgact
+      541 tatcgcgcca agaaacccgt tcagatgcca ggcgcgttca atatcgaccg gaagctggac
+      601 ataacctcgc acaacgagga ttacaccgtc gtcgaacaat acgaacgatc cgttgcacgt
+      661 cactcaacag gcggctctgg tggatcc
+//

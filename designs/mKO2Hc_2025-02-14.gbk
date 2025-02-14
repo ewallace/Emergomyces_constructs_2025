@@ -1,0 +1,24 @@
+LOCUS       mKO2Hc                   654 bp    DNA              UNK 01-JAN-1980
+DEFINITION  .
+ACCESSION   mKO2Hc
+VERSION     mKO2Hc
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+     CDS             1..654
+                     /gene="mKO2"
+ORIGIN
+        1 atggtgtccg ttattaagcc ggagatgaag atgcggtatt acatggacgg aagcgtcaac
+       61 ggccatgaat ttaccattga gggtgagggt actggtcggc catatgaagg tcaccaagag
+      121 atgactctgc gagtgaccat ggcagaaggt ggacctatgc cctttgcctt cgacctcgtt
+      181 tcccacgtct tttgttatgg acaccgtgtt ttcaccaagt accctgagga gattccggac
+      241 tacttcaagc aggcgtttcc tgagggcttg tcgtgggaac gctctcttga gttcgaggat
+      301 ggtggttcag cctcagtctc tgcgcatata tcgctgcgcg ggaacacctt ctaccacaaa
+      361 tccaagttca ccggagtcaa tttccccgct gatggcccaa tcatgcagaa ccaatccgtt
+      421 gattgggagc ccagcacaga aaagatcaca gctagcgatg gcgtcctcaa aggcgacgtc
+      481 actatgtact tgaaactcga aggggggggc aatcataaat gccaaatgaa aacgacgtac
+      541 aaggccgcca aggaaatctt ggagatgcca ggcgaccact atatcggaca tagacttgtc
+      601 cgtaagacgg agggcaacat caccgaacag gtggaggatg ctgttgcaca ctcc
+//
