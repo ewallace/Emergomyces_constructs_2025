@@ -1,3 +1,10 @@
+# codon_count_functions.py
+# Functions to calculate codon_usage_table
+# As used by DnaOptimizationProblem from DNAchisel
+# These functions were inspired by Benjamin Lee's Codon Adaptation Index package:
+#   https://github.com/Benjamin-Lee/CodonAdaptationIndex
+# Edward Wallace, Edward.Wallace@ed.ac.uk, February 2025
+
 from itertools import chain
 from scipy.stats import gmean
 from collections import Counter
@@ -110,10 +117,17 @@ def CodonFrequencyByAA(sequences, genetic_code=11, outputtype="count"):
             freqs_by_aa[aa] = minifreqs 
         return freqs_by_aa
 
-# Helper function to 
+
 def fastaFileToStrings(fastafile):
+    r"""Helper function to read in fasta file of sequences and convert to plain strings.
+    
+    Args:
+        fastafile (str): A fasta filepath or handle
+    
+    Returns:
+        list: For each record in the fasta file, a string containing the sequence
+    """
+    
     records = list(SeqIO.parse(fastafile, "fasta"))
     sequencesonly = [str(record.seq) for record in records]
     return sequencesonly
-
-
