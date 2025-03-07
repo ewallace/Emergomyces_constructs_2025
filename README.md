@@ -33,6 +33,11 @@ Green & yellow FPs:
 - [hfYFP, aka Hyperfolder YFP](https://www.fpbase.org/protein/hyperfolder-yfp/)
 - [mStayGold, aka QC2-6 FIQ](https://www.fpbase.org/protein/mstaygold/)
 
+Cas9, not an FP:
+
+- RdCas9_NLSHA - Cas9 enzyme for eukaryotic CRISPR including 2x NLS and HA tag
+
+
 ## designs
 
 Coding sequences for fluorescent proteins, adjusted to codon frequencies of Histoplasma capsulatum ribosomal proteins, moderate GC content, and to avoid select restriction enzyme sites. See source code for details.
@@ -42,6 +47,7 @@ Coding sequences for fluorescent proteins, adjusted to codon frequencies of Hist
 Source code in python format. Uses the DNAchisel package and Biopython tools.
 
 - codon_adjust_FPs.py - using DNAchisel's DnaOptimizationProblem to design sequences encoding fluorescent proteins
+- codon_adjust_Cas9.py - similarly to design for RdCas9_NLSHA, had to relax some optimisation constraints and run for more iterations as a longer harder sequence
 - codon_count_functions.py - functions to calculate codon counts and frequencies
 
 
